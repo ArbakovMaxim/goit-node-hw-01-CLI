@@ -30,8 +30,9 @@ const removeContact = async (contactId) => {
 
 const addContact = async (name, email, phone) => {
   const allContacts = await listContacts();
+  const id = allContacts.length + 1;
   const newContact = {
-    id: allContacts.length + 1,
+    id: `${id}`,
     name,
     email,
     phone,
